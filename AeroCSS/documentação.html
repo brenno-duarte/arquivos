@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentação AeroCSS</title>
+    <link type="text/css" rel="stylesheet" href="css/AeroCSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link rel="stylesheet" href="css/other.css">
+</head>
+
+<body style="background-image: url('aero2.jpg');"> 
+    <input type="checkbox" id="bt_menu">
+    <p><label for="bt_menu" id="bt_menu2" class="btn-8">Ocultar/exibir menu</label></p>
+    <!--&#9776;-->
+    <nav class="menu">
+        <ul>
+            <li><img src="logo.jpg" class="img-logo"></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cadastro</a>
+                <ul>
+                    <li><a href="#">Usuário</a></li>
+                    <li><a href="#">Pessoa física</a></li>
+                    <li><a href="#">Pessoa jurídica</a></li>
+                    <li><a href="#">Contrato</a></li>
+                    <li><a href="#">Aditivo Contratual</a></li>
+                    <li><a href="#">Ordenador de Despesa</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gerar Relatórios</a>
+                <ul>
+                    <li><a href="#">Contratos cadastrados</a></li>
+                    <li><a href="#">Contratos vigentes</a></li>
+                    <li><a href="#">Contratos vencidos</a></li>
+                    <li><a href="#">Contratados cadastrados</a></li>
+                    <li><a href="#">Ordenadores de despesa cadastrados</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h2>Menu</h2>
+        <div>
+            &lt;nav class="<span class="span1">menu</span>"><br>
+            &lt;ul><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;img src="logo.jpg" class="<span class="span1">img-logo</span>">&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Home&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Cadastro&lt;/a><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Usuário&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Pessoa física&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Pessoa jurídica&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Contrato&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Aditivo Contratual&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>&lt;a href="#">Ordenador de Despesa&lt;/a>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br>
+            &lt;/ul><br>
+            &lt;/nav><br>
+        </div>
+
+        <h2>Grid</h2>
+        <div>
+            &lt;section class="<span class="span1">container</span>"&gt;<br>
+            <span class="span2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Conteúdo aqui --></span><br>
+            &lt;/section&gt;
+            
+            <h5>As colunas funcionam da mesma maneira que o Bootstrap</h5>
+            <h6><a href="https://getbootstrap.com.br/docs/4.1/layout/grid/">Veja aqui</a></h6>
+        </div>
+
+        <h2>Formulários</h2>
+        <div>
+            &lt;form><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" class="<span class="span1">form-text</span>"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea class="<span class="span1">textarea</span>">&lt;/textarea><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" id="check" /><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="check">Checkbox&lt;/label><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="opcoes">Opções&lt;/label><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;select id="opcoes" class="<span class="span1">dropdown</span>"><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Opção 1&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Opção 2&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Opção 3&lt;/option><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select><br>
+            &lt;/form><br>       
+
+            <h5>Para efeito desfocado e transparente, utilize <span class="span1">blur</span> e uma
+            "div" depois do "form"</h5>
+            <h5>Para efeito apenas de sobra, utilize <span class="span1">shadow</span></h5>
+        </div>
+        
+        <form class="blur">
+            <div>
+                <h1>Título</h1>
+
+                <label>Nome</label>
+                <input type="text" class="form-text" placeholder="Texto a ser digitado">
+
+                <label>Textarea</label>
+                <textarea class="textarea"></textarea>
+
+                <input type="checkbox" id="c1">
+                <label for="c1">Checkbox</label>
+
+                <input type="radio" id="r1">
+                <label for="r1">Radio</label>
+
+                <section>
+                    <label for="opcoes">Opções</label>
+                    <select id="opcoes" class="dropdown">
+                        <option>Opção 1</option>
+                        <option>Opção 2</option>
+                        <option>Opção 3</option>
+                    </select>
+                </section>
+            </div>   
+        </form>
+
+        <h2>Botões</h2>
+
+        <div class="col-md-12">
+            <div class="row">
+                &lt;button class="<span class="span1">btn-1</span>">Botão 1&lt;/button>
+            </div>
+
+            <label>btn-1:</label>
+            <button class="btn-1">Botão 1</button>
+
+            <label>btn-2:</label>
+            <button class="btn-2">Botão 2</button>
+
+            <label>btn-3:</label>
+            <button class="btn-3">Botão 3</button>
+
+            <label>btn-4:</label>
+            <button class="btn-4">Botão 4</button>
+
+            <label>btn-5:</label>
+            <button class="btn-5">Botão 5</button>
+
+            <label>btn-6:</label>
+            <button class="btn-6">Botão 6</button>
+
+            <label>btn-7:</label>
+            <button class="btn-7">Botão 7</button>
+
+            <label>btn-8:</label>
+            <button class="btn-8">Botão 8</button>
+        </div>
+
+        <h2>Cores</h2>
+        <div>
+            <div class="row">
+                &lt;span class="<span class="span1">color-1</span>">Cor 1&lt;/span>
+            </div>
+
+            <span class="color-1">Cor 1</span>
+            <span class="color-2">Cor 2</span>
+            <span class="color-3">Cor 3</span>
+            <span class="color-4">Cor 4</span>
+            <span class="color-5">Cor 5</span>
+            <span class="color-6">Cor 6</span>
+            <span class="color-7">Cor 7</span>
+            <span class="color-8">Cor 8</span>
+        </div>
+
+        <h2>Botão responsivo</h2>
+        <div>
+            &lt;input type="button" class="btn-6 <span class="span1">btn-resp</span>"><br>
+            <br>
+
+            <input type="button" class="btn-6 btn-resp" value="Botão" />
+        </div>
+
+        <h2>Tabelas</h2>
+        <label>No data-label, coloque os mesmos nomes que estão dentro da tag &lt;th></label>
+
+        <div>
+            &lt;table class="<span class="span1">table-resp</span>"><br>
+            &lt;caption>Tabela&lt;/caption><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Coluna1&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Coluna2&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th>Coluna3&lt;/th><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td <span class="span1">data-label="Coluna1"</span> style="color: #000">Linha1&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td <span class="span1">data-label="Coluna2"</span> style="color: #000">Linha2&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td <span class="span1">data-label="Coluna3"</span> style="color: #000">Linha3&lt;/td><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/table><br>
+        </div>
+
+        <label>O resultado será o seguinte (reduza a tela do navegador):</label>
+
+        <table class="table-resp shadow">
+            <caption class="color-8">Tabela</caption>
+            <thead>
+                <tr>
+                    <th>Coluna1</th>
+                    <th>Coluna2</th>
+                    <th>Coluna3</th>
+                    <th>Coluna4</th>
+                    <th>Coluna5</th>
+                    <th>Coluna6</th>
+                    <th>Coluna7</th>
+                </tr>
+            </thead>
+            <tbody class="color-6">
+                <tr>
+                    <td data-label="Coluna1" style="color: #000">Linha1</td>
+                    <td data-label="Coluna2" style="color: #000">Linha2</td>
+                    <td data-label="Coluna3" style="color: #000">Linha3</td>
+                    <td data-label="Coluna4" style="color: #000">Linha4</td>
+                    <td data-label="Coluna5" style="color: #000">Linha5</td>
+                    <td data-label="Coluna6" style="color: #000">Linha6</td>
+                    <td data-label="Coluna7" style="color: #000">Linha7</td>
+                </tr>
+            </tbody>
+        </table>
+ 
+        <h2>Imagens</h2>
+        <img src="imagem.png" class="img shadow">
+
+        <h2>Modal</h2>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="btn-4">Open Modal</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-title">
+                    <span class="close">&times;</span>
+                    <p>Titulo modal</p>
+                </div>
+                <p>Teste modal</p>
+            </div>
+        </div>
+
+    <script src="AeroJs.js"></script>
+</body>
+
+</html>

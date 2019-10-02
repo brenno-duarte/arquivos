@@ -1,0 +1,29 @@
+div {
+    margin-bottom: 30px;
+}
+
+section {
+    margin: auto;
+}
+
+div {
+    font-size: 23px;
+    color: #4F94CD;
+    font-family: 'Cabin', sans-serif;
+    background: #CFCFCF;
+    padding: 10px;
+
+}
+
+label {
+    font-size: 20px;
+    color: #000;
+}
+
+.span1 {
+    color: #CD3333;
+}
+
+.span2 {
+    color: #696969;
+}
