@@ -1,0 +1,66 @@
+{% extends 'menu.html' %}
+{% block content %}
+
+<div class="back2">
+
+<section class="margem">
+	<div class="container clearfix">
+		<h2 class="title-page">Blog</h2>
+	</div>
+</section>
+
+<section class="section-content padding-y">
+	<div class="container">
+		<div class="row">
+		<main class="col-md-10 col-sm-12">
+			{% for n in noticias %}
+			<div class="col-md-12">
+				<article class="news">
+					<div>
+					<div class="row">
+						<aside class="col-sm-5">
+							<div class="img-wrap"><img src="{{ base_url() }}/views/views-gestor/fotos-blog/{{ n.imagem | slice(4,7) }}/{{ n.imagem }}"></div>
+						</aside>
+						<article class="col-sm-7">
+							<a href="{{ path_for('blogConteudo', {'id': n.idNot, 'titulo': n.titulo | replace({' ' : '-'}) | lower}) }}"><h4 class="title">{{ n.titulo }}</h4></a>
+							<dl>
+								<dd>{{ n.resumo }}</dd>
+							</dl>
+							<dl class="dlist-align">
+								<dt>Postado em:</dt>
+								<dd>{{ n.data_not | date('d/m/Y') }}</dd>
+							</dl>
+						</article>
+					</div>
+					</div>
+				</article>
+			</div>
+			<hr>
+			{% endfor %}
+			<nav>
+				<ul class="pagination pagination-lg justify-content-center">
+				  <li class="page-item"><a class="page-link" href="home?pag=1">Primeiro</a></li>
+				  {% for valor in range(valorAnt1, valorAnt2) %}
+					{% if valor > 1 %}
+					<li class="page-item"><a class="page-link" href="home?pag={{ valor }}">{{ valor }}</a></li>
+					{% endif %}
+				  {% endfor %}
+				 
+				  <li class="page-item"><span class="page-link text-dark" href="#">{{ pag_atual }}</span></li>
+
+				  {% for valor in range(valorPost1, valorPost2) %}
+					{% if valor <= qntPag %}
+					<li class="page-item"><a class="page-link" href="home?pag={{ valor }}">{{ valor }}</a></li>
+					{% endif %}
+				  {% endfor %}
+				  
+				  <li class="page-item"><a class="page-link" href="home?pag={{ qntPag }}">Último</a></li>
+				</ul>
+			</nav>
+		</main>
+		</div>
+	</div>
+</section>
+</div>
+
+{% endblock %}

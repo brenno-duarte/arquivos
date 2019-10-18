@@ -1,0 +1,117 @@
+{% extends 'menu.html' %}
+{% block content %}
+
+<div class="back2">
+<section class="container margem">
+	<div class="col-lg-6 col-sm-12">
+		<p>Pesquisar imóvel</p>
+		<form method="GET" action="{{ path_for('resultados') }}" class="search-wrap">
+			<div class="input-group w-100">
+				<select class="custom-select" name="estado" id="estado">
+					<option value="" selected disabled>Selecione o estado...</option>
+					{% for estados in estados %}
+					<option value="{{ estados.nome }}" data-id="{{ estados.id }}">{{ estados.nome }}</option>
+					{% endfor %}
+				</select>
+				<select id="cidade" name="cidade" class="custom-select" required>
+					<option value="" selected disabled>Selecione a cidade...</option>
+				</select>
+				<div class="input-group-append">
+					<button class="btn btn-warning" type="submit">Buscar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
+<!-- ========================= SECTION PAGETOP ========================= -->
+<section class="margem">
+	<div class="container clearfix">
+		<h2 class="title-page">Resultados da busca</h2>
+	</div>
+</section>
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+	<div class="container">
+		<div class="row">
+		<main class="col-md-9 col-sm-12">
+			{% if vazio == false %}
+			{% for i in imoveis %}
+			<div class="col-md-12">
+				<article class="card card-product">
+					<div class="card-body">
+					<div class="row">
+						<article class="col-sm-9">
+							<dl class="dlist-align">
+								<dt>Cód. Imóvel</dt>
+								<dd>{{ i.idImovel }}</dd>
+							</dl>
+							<dl class="dlist-align">
+								<dt>Rua</dt>
+								<dd>{{ i.rua }}</dd>
+							</dl>
+							<dl class="dlist-align">
+								<dt>Cidade</dt>
+								<dd>{{ i.cidade }}</dd>
+							</dl>
+							<dl class="dlist-align">
+								<dt>Estado</dt>
+								<dd>{{ i.estado }}</dd>
+							</dl>
+							<dl class="dlist-align">
+								<dt>Bairro</dt>
+								<dd>{{ i.bairro }}</dd>
+							</dl>
+							<dl class="dlist-align">
+								<dt>Descrição</dt>
+								<dd>{{ i.descricao }}</dd>
+							</dl>
+						</article>
+						<aside class="col-sm-3 col-md-3 border-left text-center">
+							<div class="action-wrap">
+								<div class="price-wrap h3">
+									<span class="price">R$ {{ i.valor }}</span>	
+								</div>
+								<br>
+								<p>
+									<a href="{{ path_for('visualizar', {'id': i.idImovel}) }}" class="btn btn-success btn-lg">Ver mais</a>
+								</p>
+							</div>
+						</aside>
+					</div>
+					</div>
+				</article>
+			</div>
+			{% endfor %}
+			<nav>
+				<ul class="pagination pagination-lg justify-content-center">
+				  <li class="page-item"><a class="page-link" href="resultados?estado={{ estado }}&cidade={{ cidade }}&pagina=1">Primeiro</a></li>
+				  {% for valor in range(valorAnt1, valorAnt2) %}
+					{% if valor > 1 %}
+					<li class="page-item"><a class="page-link" href="resultados?estado={{ estado }}&cidade={{ cidade }}&pagina={{ valor }}">{{ valor }}</a></li>
+					{% endif %}
+				  {% endfor %}
+				 
+				  <li class="page-item"><a class="page-link text-dark" href="#">{{ pag_atual }}</a></li>
+
+				  {% for valor in range(valorPost1, valorPost2) %}
+					{% if valor <= qntPag %}
+					<li class="page-item"><a class="page-link" href="resultados?estado={{ estado }}&cidade={{ cidade }}&pagina={{ valor }}">{{ valor }}</a></li>
+					{% endif %}
+				  {% endfor %}
+				  
+				  <li class="page-item"><a class="page-link" href="resultados?estado={{ estado }}&cidade={{ cidade }}&pagina={{ qntPag }}">Último</a></li>
+				</ul>
+			</nav>
+			{% else %}
+			<p>Não existe nenhum imóvel nesta localidade</p>
+			{% endif %}
+		</main>
+		</div>
+	</div>
+</section>
+</div>
+
+{% endblock %}
