@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+{% block content %}
+
+<div class="back2">
+<section class="section-content padding-bottom margem">
+	<div class="container">
+		<main class="col-md-12">
+			<div class="row margem">
+                <div class="col-md-8">
+                    <article class="margem">
+                        <h1>{{ noticia.titulo }}</h1>
+                        <h2 class="resumo">{{ noticia.resumo }}</h2>
+                        <p>Por {{ noticia.autor }}. {{ noticia.data | date("d/m/Y", "America/Fortaleza") }}</p>
+                        <img src="{{ base_url() }}/views/views-gestor/fotos-blog/{{ pasta }}/{{ noticia.imagem }}" class="img-fluid" style="margin-bottom: 20px;" alt="{{ noticia.nome_imagem }}">    
+                        
+                        <span>{{ noticia.conteudo | raw }}</span>
+                    </article>	
+                </div>
+            </div>
+            <div class="row margem">
+                <div class="col-md-8">
+                    <h3>Saiba mais</h3>
+                    <hr>
+                    {% for n in mais %}
+                    <mark>
+                        <a href="{{ path_for('blogConteudo', {'id': n.idNot, 'titulo': n.titulo | replace({' ' : '-'})}) }}"><p class="title">{{ n.titulo }}</p></a>
+                    </mark>
+                    {% endfor %}
+                </div>
+            </div>
+		</main>
+	</div>
+</section>
+</div>
+
+{% endblock %}

@@ -3,6 +3,7 @@
 # Caminho completo do projeto
 define('ROOT_PATH', dirname(__FILE__));
 
+# Configurações do banco
 define('DB_CONFIG', [
     'drive' => 'mysql',
     'host' => 'localhost',

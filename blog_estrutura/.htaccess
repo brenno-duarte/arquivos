@@ -1,12 +1,7 @@
 <IfModule mod_rewrite.c>
-    AddDefaultCharset UTF-8
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^ index.php [QSA,L]
     RewriteRule .* - [env=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
-
-RewriteEngine On 
-RewriteCond %{HTTPS} off 
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
