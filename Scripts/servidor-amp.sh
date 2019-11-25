@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Atualiza o repositório
 sudo apt update
 

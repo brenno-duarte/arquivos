@@ -5,11 +5,11 @@ define('ROOT_PATH', dirname(__FILE__));
 
 # Configurações do banco
 define('DB_CONFIG', [
-    'drive' => 'mysql',
-    'host' => 'localhost',
-    'dbname' => 'db_alugue',
-    'user' => 'brenno',
-    'pass' => '123'
+    'drive' => 'drive',
+    'host' => 'host',
+    'dbname' => 'banco',
+    'user' => 'usuario',
+    'pass' => 'senha'
 ]);
 
 # OpenSSL
