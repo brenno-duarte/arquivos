@@ -3,6 +3,9 @@
 # Atualiza o repositório
 sudo apt update
 
+# Instala o cUrl
+sudo apt install curl -y
+
 # Instala o apache
 sudo apt install apache2 -y
 

@@ -1,5 +1,12 @@
 <?php
 
+header('Content-Type: text/html; charset=utf-8');
+
+session_start();
+
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 # Caminho completo do projeto
 define('ROOT_PATH', dirname(__FILE__));
 
@@ -24,4 +31,11 @@ define('MAIL', [
     'port' => 587,
     'from_name' => 'Brenno Duarte',
     'from_email' => 'brennoduarte2015@outlook.com'
+]);
+
+# INFO DO SISTEMA
+
+define('SYSTEM_INFO', [
+    'version' => '0.0.0',
+    'dateVersion' => '00/00/2020'
 ]);

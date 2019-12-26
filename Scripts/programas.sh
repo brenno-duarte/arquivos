@@ -11,18 +11,17 @@ sudo apt-add-repository ppa:dolphin-emu/ppa -y
 sudo apt update
 
 # Temas para o KdenLive
-sudo apt install plasma-workspace
+sudo apt install plasma-workspace -y
 
 # Notificações da distro caso não tenha
-sudo apt install notify-osd
+sudo apt install notify-osd -y
 
 sudo apt install virtualbox -y
 sudo apt install simplescreenrecorder -y
 sudo apt install wget -y
 sudo apt install git -y
-
-# Emulador de GameCube e Wii
 sudo apt install dolphin-emu -y
+sudo apt install kdenlive -y
 
 # Cria uma pasta para armazenar os arquivos .deb
 mkdir /home/$USER/PacotesDeb/
