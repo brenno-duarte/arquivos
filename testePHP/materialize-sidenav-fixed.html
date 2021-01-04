@@ -1,0 +1,92 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+    header,
+    main,
+    footer,
+    .container {
+        padding-left: 260px;
+    }
+
+    .pt-15 {
+        padding-top: 15px;
+    }
+
+    .sidenav li>a {
+        padding: 0 20px;
+    }
+
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        .sidenav.sidenav-fixed {
+            transform: none !important;
+            width: 70px;
+            overflow: visible;
+        }
+
+        header,
+        main,
+        footer,
+        .container {
+            padding-left: 70px;
+        }
+
+        .sidenav .collapsible .active {
+            position: relative;
+        }
+
+        .sidenav .collapsible .active .collapsible-body {
+            position: absolute;
+            background-color: #fff;
+            left: 45px;
+            top: 0;
+            min-width: 130px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        header,
+        main,
+        footer,
+        .container {
+            padding-left: 0;
+        }
+    }
+</style>
+
+<ul id="slide-out" class="sidenav sidenav-fixed pt-15">
+    <li><a href="#!" class="truncate"><i class="material-icons">settings</i> <span class="hide-on-small-only">First Sidebar Link</span></a></li>
+    <li><a href="#!" class="truncate"><i class="material-icons">note</i> <span class="hide-on-small-only">2nd Sidebar Link</span></a></li>
+    <li>
+        <a class="dropdown-trigger truncate" href="#!" data-target="dropdown1"><i class="material-icons">settings</i>
+            <span class="hide-on-small-only">Settings<i class="material-icons right">arrow_drop_down</i></span></a>
+    </li>
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">First</a></li>
+        <li><a href="#!">Second</a></li>
+        <li><a href="#!">Third</a></li>
+        <li><a href="#!">Fourth</a></li>
+    </ul>
+</ul>
+<a href="#" data-target="slide-out" class="btn sidenav-trigger blue"><i class="material-icons">menu</i></a>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <p>Content mumblecore PBR try-hard kale chips. Brooklyn vinyl lumbersexual bicycle rights, viral fap cronut leggings squid chillwave pickled gentrify mustache. 3 wolf moon hashtag church-key Odd Future. Austin messenger bag normcore, Helvetica Williamsburg sartorial tote bag distillery Portland before they sold out gastropub taxidermy Vice.</p>
+            <p>3 wolf moon retro jean shorts chambray sustainable roof party. Shoreditch vegan artisan Helvetica. Tattooed Codeply Echo Park Godard kogi, next level irony ennui twee squid fap selvage. Meggings flannel Brooklyn literally small batch, mumblecore PBR try-hard kale chips. Brooklyn vinyl lumbersexual bicycle rights, viral fap cronut leggings squid chillwave pickled gentrify mustache. 3 wolf moon hashtag church-key Odd Future. Austin messenger bag normcore, Helvetica Williamsburg sartorial tote bag distillery Portland before they sold out gastropub taxidermy Vice.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+
+        var elemsCollapse = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elemsCollapse);
+    });
+</script>

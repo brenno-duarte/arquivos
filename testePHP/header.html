@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="_css/reset.css">
+    <link type="text/css" rel="stylesheet" href="_css/menu.css">
+    <link type="text/css" rel="stylesheet" href="_css/style.css">
+    <link type="text/css" rel="stylesheet" href="_css/grid/simple-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="nav-1 nav-fixed">
+        <ul class="menu">
+            <li class="logo"><a href="#">Creative Mind Agency</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item has-submenu">
+                <a tabindex="0">Services</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Design</a></li>
+                    <li class="subitem"><a href="#">Development</a></li>
+                    <li class="subitem"><a href="#">SEO</a></li>
+                    <li class="subitem"><a href="#">Copywriting</a></li>
+                </ul>
+            </li>
+            <li class="item has-submenu">
+                <a tabindex="0">Plans</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Freelancer</a></li>
+                    <li class="subitem"><a href="#">Startup</a></li>
+                    <li class="subitem"><a href="#">Enterprise</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="#">Blog</a></li>
+            <li class="item"><a href="#">Contact</a>
+            </li>
+            <li class="item btn btn-3 mr-1"><a href="#">Log In</a></li>
+            <li class="item btn btn-2"><a href="#">Sign Up</a></li>
+            <li class="toggle"><a><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="container mt-3">
+        <div class="row justify">
+            <div class="col-12">
+                <p>
+                <h1>Header 1</h1>
+                </p>
+                <p>
+                <h2>Header 2</h2>
+                </p>
+                <p>
+                <h3>Header 3</h3>
+                </p>
+                <p>
+                <h4>Header 4</h4>
+                </p>
+                <p>
+                <h5>Header 5</h5>
+                </p>
+                <p>
+                <h6>Header 6</h6>
+                </p>
+
+                <p class="font-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type <a href="#void">specimen book</a>. It has
+                    survived not only five centuries, but
+                    also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                <p class="font-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p class="font-regular">Lorem Ipsum has
+                    been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    of type and scrambled it to make a type specimen book.</p>
+                <p class="font-heavy">It has survived not only five centuries, but
+                    also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p class="font-bold">It was popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col-6 col-12-sm">
+                <h2>Botões</h2>
+                <button type="button" class="btn btn-1 btn-sm">Button 1</button>
+                <button type="button" class="btn btn-2 btn-lg">Button 2</button>
+                <button type="button" class="btn btn-3">Button 3</button>
+                <button type="button" class="btn btn-4 btn-width">Button 4</button>
+                <button type="button" class="btn btn-5">Button 5</button>
+                <button type="button" class="btn btn-6">Button 6</button>
+                <button type="button" class="btn btn-7">Button 7</button>
+                <button type="button" class="btn btn-8">Button 8</button>
+            </div>
+
+            <div class="col-6 col-12-sm">
+                <h2>Texto</h2>
+                <p class="txt-1">txt-1</p>
+                <p class="txt-2">txt-2</p>
+                <p class="txt-3">txt-3</p>
+                <p class="txt-4">txt-4</p>
+                <p class="txt-5">txt-5</p>
+                <p class="txt-6">txt-6</p>
+                <p class="txt-7">txt-7</p>
+                <p class="txt-8" style="background-color: #000;">txt-8</p>
+            </div>
+        </div>
+
+        <div class="mt-3 row">
+            <h2>Formuários</h2>
+            <form action="#">
+                <div class="col-6 col-12-sm">
+                    <input type="text" placeholder="Campo text"><br><br>
+                    <input type="date" placeholder="Campo input"><br><br>
+                    <input type="number" placeholder="Campo number"><br><br>
+                </div>
+
+                <div class="col-6 col-12-sm">
+                    <input type="search" placeholder="Campo search"><br><br>
+                    <textarea cols="30" rows="10"></textarea><br><br>
+                    <select>
+                        <option selected>--Select--</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <h2>Tabela</h2>
+        <table class="table table-action">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Info</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>27/09/2013</td>
+                    <td>One little text</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>27/09/2013</td>
+                    <td>One little text</td>
+                    <td>Inactive</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>27/09/2013</td>
+                    <td>One little text</td>
+                    <td>Draft</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>27/09/2013</td>
+                    <td>One little text</td>
+                    <td>Scheduled</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- END TABLE -->
+
+        <div class="mb-5">
+            <h2>Imagem</h2>
+            <div style="width: 50%;" class="mb-5">
+                <img src="https://computerworld.com.br/wp-content/uploads/2019/12/produtividade-IA.jpg"
+                    class="img-resp border txt-1">
+                <img src="https://computerworld.com.br/wp-content/uploads/2019/12/produtividade-IA.jpg"
+                    class="img-thumb txt-3">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <p>
+                <h2>Modal</h2>
+                </p>
+
+                <button class="btn btn-3 mt-3" onclick="openModal('#openModal');">Modal</button>
+                <!--modals-->
+                <div id="openModal" class="modalDialog">
+                    <div>
+                        <div class="modal-close">
+                            <button class="close modal-close" onclick="closeModal('#close')">X</button>
+                        </div>
+                        <div class="modal-title">
+                            <h2>Modal</h2>
+                        </div>
+                        <!-- <div class="modal-separator"></div> -->
+                        <div class="modal-content">
+                            <p class="justify">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum
+                                has
+                                been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                                galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five
+                                centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                                passages,
+                                and more recently with desktop publishing software like Aldus PageMaker including
+                                versions
+                                of
+                                Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h2>Card</h2>
+
+                <div class="cards-list">
+                    <div class="card card-effect">
+                        <div class="card-image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+                        <div class="card-title">
+                            <p class="txt-8">Card Title</p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-1 center">
+                        <input type="text" class="w-40">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-12 col-12-sm">
+                <div class="slider">
+                    <div class="slider-inner">
+                        <img src="https://picsum.photos/570/270/?random&1" />
+                        <img src="https://picsum.photos/570/270/?random&2" />
+                        <img src="https://picsum.photos/570/270/?random&3" />
+                        <img src="https://picsum.photos/570/270/?random&4" />
+                        <img src="https://picsum.photos/570/270/?random&5" />
+                        <img src="https://picsum.photos/570/270/?random&6" />
+                        <img src="https://picsum.photos/570/270/?random&7" />
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="banner banner-4">
+                    <div class="banner-content">
+                        <div class="banner-text">
+                            <strong>Reminder:</strong> your subscription expires in 22 days. Renew to avoid account
+                            suspension.
+                        </div>
+                        <button class="banner-close" type="button">
+                            <span class="material-icons">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="collapse center">
+                    <button class="collapse-toggle">Profile</button>
+                    <div class="collapse-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button class="collapse-toggle">Messages</button>
+                    <div class="collapse-content">
+                        <ul>
+                            <li>Inbox</li>
+                            <li>Sent</li>
+                            <li>Drafts</li>
+                        </ul>
+                    </div>
+
+                    <button class="collapse-toggle">Settings</button>
+                    <div class="collapse-content">
+                        <ul>
+                            <li>Profile</li>
+                            <li>Privacy & Safety</li>
+                            <li>Notifications</li>
+                        </ul>
+                    </div>
+
+                    <button class="collapse-toggle">Log out</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div id="sidebar1" class="sidebar" aria-hidden="true">
+                    <button class="sidebar-btn" data-toggle-sidebar="sidebar1">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </button>
+
+                    <div class="sidebar-content">
+                        <span>whatever you want</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="#void" class="btn-float bg-3">
+        <div class="btn-float-content">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </a>
+
+    <script src="_js/menu.js"></script>
+    <script>
+        sliderInit('slider', 4000)
+    </script>
+</body>
+
+</html>

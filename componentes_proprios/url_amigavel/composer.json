@@ -1,0 +1,9 @@
+{
+    "name": "brenno/rota",
+    "description": "descrição",
+    "autoload": {
+        "psr-4": {
+            "Source\\": "src/"
+        }
+    }
+}
