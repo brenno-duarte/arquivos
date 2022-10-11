@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link type="text/css" rel="stylesheet" href="_css/reset.css">
+    <link type="text/css" rel="stylesheet" href="_css/menu.css">
+    <link type="text/css" rel="stylesheet" href="_css/style.css">
+    <link type="text/css" rel="stylesheet" href="_css/grid/simple-grid.css"> -->
+    <link type="text/css" rel="stylesheet" href="_css/solital.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- <nav class="nav-1">
+        <ul class="menu">
+            <li class="logo"><a href="#">Creative Mind Agency</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item has-submenu">
+                <a tabindex="0">Services</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Design</a></li>
+                    <li class="subitem"><a href="#">Development</a></li>
+                    <li class="subitem"><a href="#">SEO</a></li>
+                    <li class="subitem"><a href="#">Copywriting</a></li>
+                </ul>
+            </li>
+            <li class="item has-submenu">
+                <a tabindex="0">Plans</a>
+                <ul class="submenu">
+                    <li class="subitem"><a href="#">Freelancer</a></li>
+                    <li class="subitem"><a href="#">Startup</a></li>
+                    <li class="subitem"><a href="#">Enterprise</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="#">Blog</a></li>
+            <li class="item"><a href="#">Contact</a>
+            </li>
+            <li class="toggle"><a><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav> -->
+    <div class="row">
+        <div class="col-12">
+            <div id="sidebar1" class="sidebar" aria-hidden="true">
+                <button class="sidebar-btn" data-toggle-sidebar="sidebar1">
+                    <i class="fas fa-arrows-alt-h"></i>
+                </button>
+
+                <div class="sidebar-content">
+                    <span>whatever you want</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="mt-3">
+        <section class="container mb-3">
+            <h1>User</h1>
+
+            <!-- <div class="row mt-4 mb-3">
+                <div class="col-12">
+                    <a href="#" class="btn btn-3">New New</a>
+                </div>
+            </div> -->
+        </section>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-action">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Info</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>27/09/2013</td>
+                            <td>One little text</td>
+                            <td>
+                                <a href="#" class="btn btn-2 mr-1">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-4">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="openModal" class="modalDialog">
+            <div class="modal">
+                <div class="modal-close">
+                    <button class="close modal-close" onclick="closeModal('#close')">X</button>
+                </div>
+                <div class="modal-title">
+                    <h2>Modal</h2>
+                </div>
+                <!-- <div class="modal-separator"></div> -->
+                <div class="modal-content">
+                    <form action="#">
+                        <div class="col-6 col-12-sm">
+                            <input type="text" placeholder="Campo text"><br><br>
+                            <input type="date" placeholder="Campo input"><br><br>
+                            <input type="number" placeholder="Campo number"><br><br>
+                        </div>
+
+                        <div class="col-6 col-12-sm">
+                            <input type="search" placeholder="Campo search"><br><br>
+                            <textarea cols="30" rows="10"></textarea><br><br>
+                            <select>
+                                <option selected>--Select--</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a class="btn-float bg-3" onclick="openModal('#openModal');">
+        <div class="txt-8" style="margin-left: 3px;">
+            <i class="fas fa-plus"></i>
+        </div>
+    </a>
+
+    <script src="_js/solital.js"></script>
+</body>
+
+</html>

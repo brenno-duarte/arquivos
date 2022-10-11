@@ -7,13 +7,13 @@ class callCurl {
 	private $url;
 	private $token;
 
-	public function __construct(string $url, string $token = null)
+	public function __construct($url, $token = null)
 	{
 		$this->url = $url;
 		$this->token = $token;
 	}
 
-	public function get(bool $decode = false)
+	public function get($decode = false)
 	{
 		$header = [
 			'Content-Type: application/json',
@@ -66,7 +66,7 @@ class callCurl {
 		return $res;
 	}
 
-	public function put(array $data)
+	public function put($data)
 	{
 		$header = [
             'Content-Type: application/json',
@@ -92,7 +92,7 @@ class callCurl {
 		return $res;
 	}
 
-	public function delete(string $accept = "application/json", string $contentType = "application/json")
+	public function delete($accept = "application/json", $contentType = "application/json")
 	{
 		$header = [
 			'Content-Type: application/json',

@@ -8,8 +8,8 @@ define('DB_CONFIG', [
     'drive' => 'mysql',
     'host' => 'localhost',
     'dbname' => 'db_teste',
-    'user' => 'brenno',
-    'pass' => '123'
+    'user' => 'root',
+    'pass' => ''
 ]);
 
 # OpenSSL
